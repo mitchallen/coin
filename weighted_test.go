@@ -19,18 +19,17 @@ func TestWeightAverage50(t *testing.T) {
 
 	limit := 1000
 	threshold := 400
-	heads := 0
-	tails := 0
 
-	for i := 1; i < limit; i++ {
-		if Weighted(0.5) {
-			heads++
-		} else {
-			tails++
-		}
+	m := map[bool]int{
+		true:  0,
+		false: 0,
 	}
 
-	if heads < threshold || tails < threshold {
+	for i := 1; i < limit; i++ {
+		m[Weighted(0.5)]++
+	}
+
+	if m[true] < threshold || m[false] < threshold {
 		t.Errorf("Weighted(0.5) true false not very balanced")
 	}
 }
@@ -38,37 +37,35 @@ func TestWeightAverage50(t *testing.T) {
 func TestWeightAverage75(t *testing.T) {
 
 	limit := 1000
-	heads := 0
-	tails := 0
 
-	for i := 1; i < limit; i++ {
-		if Weighted(0.75) {
-			heads++
-		} else {
-			tails++
-		}
+	m := map[bool]int{
+		true:  0,
+		false: 0,
 	}
 
-	if heads < tails {
-		t.Errorf("Weighted(0.75) heads should happen more than tails")
+	for i := 1; i < limit; i++ {
+		m[Weighted(0.75)]++
+	}
+
+	if m[true] < m[false] {
+		t.Errorf("Weighted(0.75) true should happen more than false")
 	}
 }
 
 func TestWeightAverage25(t *testing.T) {
 
 	limit := 1000
-	heads := 0
-	tails := 0
 
-	for i := 1; i < limit; i++ {
-		if Weighted(0.25) {
-			heads++
-		} else {
-			tails++
-		}
+	m := map[bool]int{
+		true:  0,
+		false: 0,
 	}
 
-	if tails < heads {
-		t.Errorf("Weighted(0.75) heads should happen more than tails")
+	for i := 1; i < limit; i++ {
+		m[Weighted(0.25)]++
+	}
+
+	if m[false] < m[true] {
+		t.Errorf("Weighted(0.25) false should happen more than true")
 	}
 }

@@ -19,18 +19,17 @@ func TestFlipAverage(t *testing.T) {
 
 	limit := 1000
 	threshold := 400
-	heads := 0
-	tails := 0
 
-	for i := 1; i < limit; i++ {
-		if Flip() {
-			heads++
-		} else {
-			tails++
-		}
+	m := map[bool]int{
+		true:  0,
+		false: 0,
 	}
 
-	if heads < threshold || tails < threshold {
+	for i := 1; i < limit; i++ {
+		m[Flip()]++
+	}
+
+	if m[true] < threshold || m[false] < threshold {
 		t.Errorf("Flip() true false not very balanced")
 	}
 }
