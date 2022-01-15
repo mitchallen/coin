@@ -5,10 +5,10 @@
 ### Initialize your module
 
 ```
-$ go mod init example.com/my-gokit-demo
+$ go mod init example.com/my-demo
 ```
 
-### Get the gokit module
+### Get the module
 
 Note that you need to include the **v** in the version tag.
 
@@ -21,7 +21,6 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/mitchallen/coin"
 )
 
