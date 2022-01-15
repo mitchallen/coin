@@ -16,10 +16,12 @@ func TestFlip(t *testing.T) {
 }
 
 func TestFlipAverage(t *testing.T) {
+
 	limit := 1000
 	threshold := 400
 	heads := 0
 	tails := 0
+
 	for i := 1; i < limit; i++ {
 		if Flip() {
 			heads++

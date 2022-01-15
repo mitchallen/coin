@@ -13,8 +13,10 @@ $ go mod init example.com/my-demo
 Note that you need to include the **v** in the version tag.
 
 ```
-$ go get github.com/mitchallen/coin@v0.1.0
+$ go get github.com/mitchallen/coin@v0.2.0
 ```
+
+### coin.Flip()
 
 ```go
 package main
@@ -26,6 +28,22 @@ import (
 
 func main() {
 	fmt.Println(coin.Flip())
+}
+```
+
+### coin.Weighted(w)
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/mitchallen/coin"
+)
+
+func main() {
+	// Will return true ~75% of the time
+	fmt.Println(coin.Weighted(0.75))
 }
 ```
 
