@@ -78,4 +78,4 @@ $ git tag v0.1.0
 
 ## Package
 
-* https://pkg.go.dev/search?q=mitchallen
+* https://pkg.go.dev/search?q=mitchallen/
