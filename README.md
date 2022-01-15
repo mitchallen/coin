@@ -68,8 +68,11 @@ $ go test
 
 ## Tagging
 
+Substitute the light weight tag value with the latest tag to publish
+
 ```
 $ git tag v0.1.0
+$ git push origin --tags
 ```
 
 ## Publishing instructions
