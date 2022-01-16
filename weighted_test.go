@@ -25,7 +25,7 @@ func TestWeightAverage50(t *testing.T) {
 		false: 0,
 	}
 
-	for i := 1; i < limit; i++ {
+	for i := 0; i < limit; i++ {
 		m[Weighted(0.5)]++
 	}
 
@@ -43,7 +43,7 @@ func TestWeightAverage75(t *testing.T) {
 		false: 0,
 	}
 
-	for i := 1; i < limit; i++ {
+	for i := 0; i < limit; i++ {
 		m[Weighted(0.75)]++
 	}
 
@@ -61,7 +61,7 @@ func TestWeightAverage25(t *testing.T) {
 		false: 0,
 	}
 
-	for i := 1; i < limit; i++ {
+	for i := 0; i < limit; i++ {
 		m[Weighted(0.25)]++
 	}
 

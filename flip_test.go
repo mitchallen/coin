@@ -25,7 +25,7 @@ func TestFlipAverage(t *testing.T) {
 		false: 0,
 	}
 
-	for i := 1; i < limit; i++ {
+	for i := 0; i < limit; i++ {
 		m[Flip()]++
 	}
 
