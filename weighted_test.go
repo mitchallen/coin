@@ -1,6 +1,6 @@
 /**
  * Author: Mitch Allen
- * File: flip_test.go
+ * File: weighted_test.go
  */
 
 package coin
