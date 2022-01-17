@@ -7,11 +7,9 @@ package coin
 
 import (
 	"math/rand"
-	"time"
 )
 
 // Weighted returns a random boolean true or false based on weight (0.0..<1.0)
 func Weighted(weight float32) bool {
-	rand.Seed(time.Now().UnixNano())
 	return rand.Float32() <= weight
 }
