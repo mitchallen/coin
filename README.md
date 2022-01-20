@@ -1,5 +1,8 @@
 # github.com/mitchallen/coin
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/mitchallen/coin.svg)](https://pkg.go.dev/github.com/mitchallen/coin)
+
+
 ## Usage
 
 Note that you need to include the **v** in the version tag.
